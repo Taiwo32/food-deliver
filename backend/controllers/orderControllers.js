@@ -3,11 +3,14 @@ import userModel from "../models/userModel.js";
 import Stripe from "stripe"
 
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY)
+//the middleware added in the route is to get the user ID after decoding the token it will add the user Id to the models  
+//line 21 cleaning the user cart-data 
+// the line item is necessary for the stripe payment
 
 // placing user order for frontend 
 const placeOrder = async (req,res) =>{
 
-    const frontend_url = "http://localhost:5174";
+    const frontend_url = "http://localhost:5173";
 
 
     try {
@@ -77,6 +80,7 @@ const verifyOrder = async (req,res) => {
 }
 
 // user orders for front end
+// showing the orders in the user panel
 const userOrders = async (req,res) =>{
     try {
         const orders = await orderModel.find({userId:req.body.userId});
@@ -88,6 +92,7 @@ const userOrders = async (req,res) =>{
 }
 
 // listing orders for admin panel
+//showing the orders in admin panel
 
 const listOrders = async (req,res) =>{
     try {

@@ -12,6 +12,9 @@ import MyOrders from './pages/MyOrders/MyOrders'
 const App = () => {
   const [showLogin,setShowLogin] = useState(false)
 
+
+  //the login was set false here but on clicking on the button in the navbar we set it to true 
+
   return (
     <>
     {showLogin?<LoginPopup setShowLogin={setShowLogin}/>:<></>}

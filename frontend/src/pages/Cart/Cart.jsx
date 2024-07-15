@@ -3,6 +3,9 @@ import './Cart.css'
 import { StoreContext } from '../../context/StoreContext'
 import { useNavigate } from 'react-router-dom'
 
+
+// what we did here is whatever we add to cart to display here ie the id of the cart-items should display in the cart and calculate the amount
+
 const Cart = () => {
 
     const { cartItems, food_list, removeFromCart, getTotalCartAmount, url} = useContext(StoreContext) // we are getting the url from the context api

@@ -1,5 +1,8 @@
 import jwt from "jsonwebtoken"
 
+// the auth middle ware works with the add to cart,remove from cart and get all cart functions 
+//the middle ware helps to update the cart data that is set in the user models 
+
 const authMiddleware = async (req,res,next) => {
     const {token} = req.headers;
     if (!token) {

@@ -4,10 +4,15 @@ import {assets} from '../../assets/assets'
 import { Link, useNavigate } from 'react-router-dom'
 import { StoreContext } from '../../context/StoreContext'
 
+
+// for the navbar i use a ternary operator to declare the active class
+//line 38 ternary operator if getTotalAmount is 0 it it should be an empty string else it should display the dot
+
+
 const Navbar = ({setShowLogin}) => {
     const [menu,setMenu] = useState("home");
 
-    const {getTotalCartAmount,token,setToken} =useContext(StoreContext);
+    const {getTotalCartAmount,token,setToken} = useContext(StoreContext);
 
     const navigate = useNavigate();
 

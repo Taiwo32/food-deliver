@@ -12,6 +12,7 @@ const FoodDisplay = ({category}) => {
             {food_list.map((item,index)=>{
                 if (category==="All" || category===item.category){
                     return <FoodItem key={index} id={item._id} name={item.name} description={item.description} price={item.price} image={item.image}/>
+                    // if it is on all get all the food and if not get the food by the category in the database
                 }
                 
             })}

@@ -6,6 +6,11 @@ import axios from 'axios'
 import { useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 
+// line 14 create the state where we store the information on the form list
+// the on change handler is saving the input on the front end into the state variable 
+// evenPreventDefualt means it should not reload the page, ie when submitting the form
+// line 34 in the place order we are saving all the items data and quantity into the array
+//the session url is the url from stripe which is the payment gateway
 
 const PlaceOrder = () => {
     const { getTotalCartAmount,token, food_list, cartItems, url, } = useContext(StoreContext)

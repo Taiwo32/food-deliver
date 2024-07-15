@@ -1,5 +1,7 @@
 import userModel from "../models/userModel.js"
 
+// the if and else function here is that when a user is logged in it the cart object should be open while the else is when a user add to cart it should increase the cart b y one 
+
 // add item to user cart 
 const addToCart = async (req,res) => {
     try {

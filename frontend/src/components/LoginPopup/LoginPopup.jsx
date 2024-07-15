@@ -5,6 +5,13 @@ import { useContext } from 'react'
 import { StoreContext } from '../../context/StoreContext'
 import axios from 'axios'
 
+// on the navbar we set the setshowlogin to be true but we put a cross icon and set it to be false on the pop up here 
+//line 58 the ternary operator says on click on login show just login and password with empty fragment  else show the input with name email and password
+// line 69 to 72 another ternary operator with the on click which says on login show the login popup and on signup show the signup popup 
+// the click effect on span  is on click on setcurr login show the login and on click on signup show the sign up
+
+//the onchange handler in line 26 is taking the input value and save it to the state --- data and setData_- 
+
 
 const LoginPopup = ({setShowLogin}) => {
 

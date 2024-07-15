@@ -22,7 +22,9 @@
 }
 .explore-menu-list::-webkit-scrollbar{
     display: none;
+    /* so as to hide the scrollbar */
 }
+
 .explore-menu-list-item img{
    width: 7.5vw;
    min-width: 80px;
